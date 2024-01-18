@@ -67,4 +67,4 @@ jobs:
           curl "${{ env.PING_URL }}"
         env:
           PING_URL: ${{ secrets.PING_URL }}
-      - uses: gautamkrishnar/keepalive-workflow@v1
+  
