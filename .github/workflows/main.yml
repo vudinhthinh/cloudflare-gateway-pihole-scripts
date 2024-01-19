@@ -2,7 +2,7 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: "0 3 * * 1"
+    - cron: "0 22 * * *"
   push:
     branches:
       - main
@@ -67,3 +67,6 @@ jobs:
           curl "${{ env.PING_URL }}"
         env:
           PING_URL: ${{ secrets.PING_URL }}
+
+      - name: Keep workflow alive
+        uses: gautamkrishnar/keepalive-workflow@v1
