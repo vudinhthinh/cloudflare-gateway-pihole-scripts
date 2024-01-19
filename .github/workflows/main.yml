@@ -16,11 +16,11 @@ env:
   NODE_ENV: production
 
 jobs:
-  cgps:
+  cronjob-based-github-action:
+    name: Cronjob based github action
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           repository: "mrrfv/cloudflare-gateway-pihole-scripts"
           ref: "v1"
